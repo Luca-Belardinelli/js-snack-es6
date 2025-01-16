@@ -20,7 +20,7 @@ const squad = [
     {nome: 'Frosinone', puntifatti: 0, fallisubiti: 0},
 ];
 
-console.table(squad);
+// console.table(squad);
 
 // Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”
 
@@ -29,6 +29,25 @@ function randomNumber(min,max){
     return (Math.floor(Math.random() * (max - min + 1)) + min);
 }
 
-// Aggiungiamo numeri casuali per i punti e i falli subiti
+// Aggiungiamo numeri casuali per i puntifatti falli subiti
+for (let i = 0; i < squad.length; i++){
+    // console.log(squad[i]);
+    // console.log(squad[i].puntifatti);
+    squad[i].puntifatti = randomNumber(1,50);
+}
+
+//  console.table(squad);
 
 
+ // Aggiungiamo numeri casuali per i falli subiti
+ for (let i = 0; i < squad.length; i++){
+    // console.log(squad[i]);
+    // console.log(squad[i].puntifatti);
+    squad[i].fallisubiti = randomNumber(1,50);
+}
+
+
+console.table(squad);
+
+
+// creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
