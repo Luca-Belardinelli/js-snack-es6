@@ -23,3 +23,12 @@ const squad = [
 console.table(squad);
 
 // Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”
+
+// funzione per i numeri casuali
+function randomNumber(min,max){
+    return (Math.floor(Math.random() * (max - min + 1)) + min);
+}
+
+// Aggiungiamo numeri casuali per i punti e i falli subiti
+
+
